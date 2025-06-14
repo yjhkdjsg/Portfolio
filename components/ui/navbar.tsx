@@ -6,6 +6,7 @@ import { Raleway } from "next/font/google";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Button } from "./button";
 import { motion } from "framer-motion";
+import { IconType } from 'react-icons';
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
   </motion.div>
 );
 
-const SocialIcon = ({ href, icon: Icon }: { href: string; icon: any }) => (
+const SocialIcon = ({ href, icon: Icon }: { href: string; icon: IconType }) => (
   <motion.div
     whileHover={{ scale: 1.2, rotate: 5 }}
     transition={{ type: "spring", stiffness: 400, damping: 10 }}
